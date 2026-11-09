@@ -1,83 +1,83 @@
 # Project brief: Can genre help predict video game sales success?
 
-**Status:** Working plan, 9 November 2026. **Submission deadline: 22 April 2027.** The research question and methods can change if the evidence warrants it. The milestone dates below are proposed checkpoints, not additional university deadlines.
+**Status:** My working plan, 9 November 2026. **Submission deadline: 22 April 2027.** I may change the research question or methods if the evidence gives me a good reason. The dates below are my own checkpoints, not additional university deadlines.
 
 ## 1. Overview and motivation
 
-Publishers choose what kinds of games to make under uncertainty. The changing direction of *Resident Evil* and the prominence of *Call of Duty* in Shooters make genre an interesting starting point. These are **motivating examples**, not proof that genre causes sales. Publisher, franchise, platform, marketing, budget and many other factors may matter too.
+I became interested in this question because of how the *Resident Evil* series changed direction and how strongly *Call of Duty* is associated with Shooters. These examples made me wonder whether genre helps predict a game’s sales. They do not prove that genre causes sales: publisher, franchise, platform, marketing, budget and other factors may also matter.
 
-This project uses the public [Video Games Sales as at 22 Dec 2016 dataset](https://www.kaggle.com/datasets/sidtwr/videogames-sales-dataset). Each original row is a game on one platform. The working analysis combines platform records for the same title, then asks whether the title's recorded worldwide sales reach **one million copies**. [Capcom](https://www.capcom.co.jp/ir/english/business/million.html) describes one million units for a title as a major hit, which gives the threshold a practical rationale. The dataset's totals remain estimates and may omit digital or other sales.
+I am using the public [Video Games Sales as at 22 Dec 2016 dataset](https://www.kaggle.com/datasets/sidtwr/videogames-sales-dataset). Each original row represents a game on one platform. I plan to combine the platform rows for the same title and examine whether its recorded worldwide sales reach **one million copies**. [Capcom](https://www.capcom.co.jp/ir/english/business/million.html) describes one million units for a title as a major hit, which gives me a reason for testing that threshold. I still need to remember that these figures are estimates and may omit digital or other sales.
 
 ## 2. Aim and research question
 
-**Aim:** Assess how useful genre is for predicting whether a game title reaches one million **recorded** worldwide sales across the platforms present in this dataset, and whether publisher and release year improve that prediction.
+**Aim:** I want to find out how useful genre is for predicting whether a game title reaches one million **recorded** worldwide sales across the platforms in this dataset. I will also test whether adding publisher and release year improves the prediction.
 
 **Main question:** *To what extent can genre predict whether a video game title reaches one million recorded worldwide sales, and how does the prediction change when publisher and release year are considered?*
 
-**Subquestions:**
+**Questions I will investigate:**
 
 1. How common is a one-million-title, overall and within each genre?
 2. Do publisher or franchise patterns alter the apparent genre relationship?
 3. Does the mix of recorded genres change by release year?
 4. Do models using genre beat a simple baseline on unseen titles, and how much do publisher and year add?
 
-**Meaning of “predict”:** Look for a useful statistical association using information that could be known before release. Do **not** interpret a model coefficient or genre comparison as evidence that changing a game's genre would cause a sales change. “Success” here means only the stated sales threshold; the data do not measure profit.
+**What I mean by “predict”:** I am looking for a useful statistical association using information that could be known before release. I will not treat a model result or a genre comparison as proof that changing a game’s genre would change its sales. By “success”, I currently mean only reaching the stated sales threshold; this dataset does not measure profit.
 
-## 3. Requirements from the coursework
+## 3. What my coursework needs to show
 
-| Area | Evidence to produce |
+| Area | What I need to show |
 |---|---|
-| Data understanding (30%) | Origin, row meaning, coverage, missing values, duplicates, sales distribution, genre/publisher/year patterns, and an explanation of how findings changed the target and feature choices. Purposeful figures with written interpretation. |
-| Problem and models (25%) | A justified title-level target; a main model suited to categorical data; one less suitable alternative actually applied to the same data and rejected using evidence. |
-| Method and evaluation (30%) | A meaningful baseline, an untouched test set, validation using only training data, preprocessing fitted within the training pipeline, fixed random seeds, metrics suited to the relatively uncommon success class, and honest interpretation of errors. |
-| Reflection and communication (15%) | Limits of sales estimates and genre labels; what real use would require; a specific AI-use appendix, including corrections to AI output. |
-| Submission | A 2,000-word report (per the brief, ±10%) with the word count stated, bibliography in the style specified by the module and DOIs where available, plus a runnable Jupyter notebook with visible outputs. Label report figures/tables with the producing notebook cell. Give data source, library versions and run instructions. |
+| Data understanding (30%) | I will explain the data’s origin, row meaning, coverage, missing values, duplicates and sales distribution. I will interpret genre, publisher and year patterns and show how my findings influenced the target and features. |
+| Problem and models (25%) | I will justify the title-level target, choose a main model that suits the data, and apply a less suitable alternative to the same data. I will use the results to explain whether I reject that alternative. |
+| Method and evaluation (30%) | I will include a simple baseline, keep a test set untouched during model development, validate using training data, prevent preparation steps from leaking information, fix random seeds and choose metrics that reveal errors on the less common success class. |
+| Reflection and communication (15%) | I will discuss the limits of the sales estimates and genre labels, what practical use would require, and how I used and checked AI assistance, including any corrections. |
+| Submission | I will submit a 2,000-word report (±10%) with its word count stated, references in Cite Them Right Harvard style and DOIs where available, and a runnable Jupyter notebook with visible outputs. I will label report figures and tables with the producing notebook cell and provide the data source, library versions and run instructions. |
 
 ## 4. SMART working objectives
 
-These are proposed checkpoints leading to the **22 April 2027** submission. They can move around other coursework, provided the final verification time is protected.
+These are my proposed checkpoints leading to the **22 April 2027** submission. I may adjust them around other coursework, but I want to leave time for a full rerun and final check.
 
-| When | Specific, measurable outcome |
+| When | What I plan to complete |
 |---|---|
-| By **30 November 2026** | Check title aggregation and document every exclusion/correction; produce at least three figures that directly inform the target, feature choice or data limitations; write a short interpretation under each. |
-| By **15 December 2026** | Read and note the two academic sources below. Record one useful claim and one limitation for each, in your own words. |
-| By **31 January 2027** | Freeze the main target and features. Record the number of titles and the percentage labelled successful. Check whether conclusions change under at least one alternative threshold (for example 0.5 or 2 million). |
-| By **28 February 2027** | Compare a majority-class or prior-probability baseline, a genre-only model, and a genre + publisher + year model on the same held-out titles. Test a less suitable alternative on the same split. Report a confusion matrix plus precision, recall and a suitable summary metric. |
-| By **31 March 2027** | Draft the report within the permitted word count, insert cell-linked figures/tables, verify every citation and DOI, and write the AI-use appendix in your own words. |
-| By **19 April 2027** | Restart and run every notebook cell in order, keep all outputs visible, confirm results match the report, and check that the data and version instructions let another person rerun it. |
-| On **22 April 2027** | Submit the final report and notebook via Blackboard before the stated submission time. |
+| By **30 November 2026** | I will check how platform rows are combined into titles, document each exclusion or correction, and produce at least three figures that help me choose the target or features or understand a limitation. I will explain each figure. |
+| By **15 December 2026** | I will read the two academic sources below and write down one useful point and one limitation for each, in my own words. |
+| By **31 January 2027** | I will settle on the main target and features, record the number of titles and the percentage labelled successful, and test whether at least one other threshold (such as 0.5 or 2 million) changes the picture. |
+| By **28 February 2027** | I will compare a simple baseline, a genre-only model, and a genre + publisher + year model on the same held-out titles. I will also test a less suitable alternative on that split and report a confusion matrix, precision, recall and another suitable summary metric. |
+| By **31 March 2027** | I will draft the report within the permitted word count, link each figure and table to its notebook cell, check citations and DOIs, and write the AI-use appendix in my own words. |
+| By **19 April 2027** | I will restart and run the notebook from top to bottom, save all outputs, check that its results match the report, and test the data and version instructions. |
+| On **22 April 2027** | I will submit the final report and notebook via Blackboard before the stated submission time. |
 
-## 5. Working analytical choices to test
+## 5. Analytical choices I am testing
 
-- **Unit of analysis:** one game title. Combining platform rows matters: some titles pass one million in total even though no single platform row does. Check that exact-name grouping has not merged unrelated games. The current exploration excludes eight ambiguous names and records a checked genre correction for *FIFA Soccer 13*; retain an audit trail and the untouched CSV.
-- **Main target:** at least one million combined **recorded** sales. This threshold is interpretable, but subjective and sensitive to missing sales.
-- **Candidate features:** genre first, then publisher and first recorded release year. Platform reach is worth exploring but may be unavailable when a publisher is making an early decision. Review the timing of each feature before modelling. Metacritic scores have many missing values and are usually known after release, so they are not a good feature for a pre-release question.
-- **Candidate main model:** logistic regression with appropriate encoding. It is a reasonable starting point for a binary target and makes a transparent comparison between genre-only and expanded features.
-- **Candidate less suitable model:** k-nearest neighbours on the same dataset. Its distance between one-hot encoded genres/publishers may be hard to justify. This is a hypothesis to evaluate, not a prewritten conclusion; if it performs well, report that honestly and explain what the comparison does and does not show.
-- **Evaluation:** keep one title in one split only; use a fixed, stratified train/test split for the cross-sectional question, and consider a later-year holdout as a robustness check. A majority-class accuracy near 82% would be easy to obtain by predicting every title is below one million, so include precision, recall and a confusion matrix. Consider PR-AUC if predicted probabilities are used.
+- **Unit of analysis:** I plan to analyse one game title at a time. Combining platform rows matters because some titles pass one million in total even though no single platform does. I need to check that grouping by exact name has not merged unrelated games. My current exploration excludes eight ambiguous names and records a checked genre correction for *FIFA Soccer 13*. I will keep an audit trail and leave the original CSV unchanged.
+- **Main target:** I am testing at least one million combined **recorded** sales. The threshold is easy to explain, but it is a judgement and could be affected by missing sales.
+- **Candidate features:** I will start with genre, then test publisher and first recorded release year. I may explore platform reach, although it might not be known when an early decision is made. I will check when each feature would be available. Metacritic scores are often missing here and are generally known after release, so I do not currently plan to use them for a pre-release question.
+- **Candidate main model:** I am considering logistic regression with categorical features encoded appropriately. It suits a yes/no target and would let me compare genre alone with the expanded set of features.
+- **Candidate alternative:** I will test k-nearest neighbours on the same data. I suspect that measuring distance between encoded genres and publishers may be difficult to justify, but I will judge it using the results. If it performs well, I will report that rather than assume it is unsuitable.
+- **Evaluation:** I will keep each title in only one split and use a fixed, stratified train/test split for the main comparison. I may also test a later-year holdout. Predicting every title is below one million could already give accuracy near 82%, so I will examine precision, recall and a confusion matrix rather than rely on accuracy alone. If I use predicted probabilities, I will consider PR-AUC.
 
-## 6. Focused literature review plan
+## 6. My reading plan
 
-The coursework does **not** explicitly demand a stand-alone literature review. For a 2,000-word report, a focused **200–300-word “context and related research” section** is more useful than a long survey. Each source should support a decision or a limitation:
+The coursework does not explicitly ask for a separate literature review. I plan to use around **200–300 words** in the report to discuss related research. I want each source to help explain one of my choices or limitations:
 
-| Source | What it contributes | How to use it critically |
+| Source | Why I selected it | What I need to check |
 |---|---|---|
-| [Cox (2014)](https://researchportal.port.ac.uk/en/publications/what-makes-a-blockbuster-video-game-an-empirical-analysis-of-us-s/), DOI [10.1002/mde.2608](https://doi.org/10.1002/mde.2608) | Studies the likelihood of a video game title becoming a blockbuster; uses logistic regression among other methods and reports associations with publisher and platform. | Motivates testing more than genre. Its US data and definition of a blockbuster are not identical to ours. Read the paper before describing exact thresholds or findings beyond the abstract. |
-| [Faisal and Peltoniemi (2018)](https://researchportal.tuni.fi/en/publications/establishing-video-game-genres-using-data-driven-modeling-and-pro/), DOI [10.1177/1555412015601541](https://doi.org/10.1177/1555412015601541) | Examines how video game genres are established using product databases. | Use to discuss why one broad genre label can be debatable and why classification errors matter. Check the full paper for specific claims. |
-| [Capcom, *Platinum Titles*](https://www.capcom.co.jp/ir/english/business/million.html) | Gives a real-world rationale for the one-million-unit threshold. | A publisher's description of a “major hit” is a working convention; it is not a profit measure or universal rule. |
-| [VGChartz methodology](https://www.vgchartz.com/methodology.php) | Explains limitations of its legacy software-sales estimates and the difficulty of digital coverage. | Use to qualify how much trust to place in recorded sales and how far findings apply beyond this historic dataset. |
+| [Cox (2014)](https://researchportal.port.ac.uk/en/publications/what-makes-a-blockbuster-video-game-an-empirical-analysis-of-us-s/), DOI [10.1002/mde.2608](https://doi.org/10.1002/mde.2608) | Studies the likelihood of a video game title becoming a blockbuster; uses logistic regression among other methods and reports associations with publisher and platform. | It gives me a reason to test more than genre. Its US data and blockbuster definition differ from mine, so I need to read the paper before using any more specific findings. |
+| [Faisal and Peltoniemi (2018)](https://researchportal.tuni.fi/en/publications/establishing-video-game-genres-using-data-driven-modeling-and-pro/), DOI [10.1177/1555412015601541](https://doi.org/10.1177/1555412015601541) | Examines how video game genres are established using product databases. | I can use this to discuss why a single broad genre label may be debatable. I need to read the full paper before making specific claims about its results. |
+| [Capcom, *Platinum Titles*](https://www.capcom.co.jp/ir/english/business/million.html) | It gives me a practical reason to test the one-million-unit threshold. | I will treat Capcom’s description of a “major hit” as a convention, not as a profit measure or a universal rule. |
+| [VGChartz methodology](https://www.vgchartz.com/methodology.php) | Explains limitations of its legacy software-sales estimates and the difficulty of digital coverage. | I will use this to discuss how much trust I can place in recorded sales and whether the findings apply beyond this historic dataset. |
 
-**Literature questions for you to answer after reading:** Why did Cox use a binary blockbuster outcome? What does “publisher effect” mean without claiming causation? How might a broad or wrong genre label change our results? Is one million copies a fair threshold for every publisher and year?
+**Questions I want to answer after reading:** Why did Cox use a binary blockbuster outcome? What does “publisher effect” mean without claiming causation? How might a broad or wrong genre label change our results? Is one million copies a fair threshold for every publisher and year?
 
-## 7. Main limitations and checks
+## 7. Limitations I need to address
 
-- The file ends in 2016, so it cannot directly analyse *Resident Evil 7* or today's games. A 2016 snapshot gives older releases more time to accumulate sales than newer releases.
-- Recorded sales are estimates, not verified complete lifetime totals. The dataset does not include budgets, prices, marketing, development decisions or a reliable launch-period sales series.
-- A yearly increase in the **share of titles** in a genre does not establish that publishers copied an earlier hit. We can describe the pattern, then state what additional time-series evidence would be needed.
-- Genre and publisher are associated with franchises, investment, platform and audience. These comparisons do not identify a causal effect.
-- Check whether large franchises such as *Call of Duty* dominate totals or success rates; report both counts and rates so a few famous games do not stand in for a whole genre.
+- The file ends in 2016, so I cannot directly analyse *Resident Evil 7* or today's games. A 2016 snapshot gives older releases more time to accumulate sales than newer releases.
+- I am working with estimated recorded sales, not verified complete lifetime totals. The dataset does not include budgets, prices, marketing, development decisions or a reliable launch-period sales series.
+- A yearly increase in the **share of titles** in a genre does not establish that publishers copied an earlier hit. I can describe any pattern I find and explain what further time-series evidence would be needed to test that idea.
+- Genre and publisher are associated with franchises, investment, platform and audience. I cannot use these comparisons to identify a causal effect.
+- I will check whether large franchises such as *Call of Duty* dominate totals or success rates. I will show both counts and rates so a few famous games do not stand in for an entire genre.
 
-## 8. Suggested report shape (2,000 words excluding references/appendices)
+## 8. Planned report structure (2,000 words excluding references/appendices)
 
 1. Introduction, question and related research: **300 words**.
 2. Data origin, quality and exploration: **500 words**.
@@ -85,14 +85,14 @@ The coursework does **not** explicitly demand a stand-alone literature review. F
 4. Validation, results and interpretation: **600 words**.
 5. Reflection and conclusion: **250 words**.
 
-The exact balance can move as findings develop. Keep the report in your own voice and use the notebook as the source for every number and figure.
+I may adjust this balance as the findings develop. Every number and figure in my report will come from the notebook.
 
-## 9. Decisions for the student to make
+## 9. Questions I still need to resolve
 
-1. Is the intended use **before release** (help a publisher choose a project) or **at release** (estimate potential for an announced game)? This determines which features are legitimate.
-2. Does “success” mean **one million recorded copies**, or would a different threshold better match the question? Explain the choice using both the data distribution and a real-world source.
-3. Do you want the story to centre on **genre alone**, or on how genre changes when publisher is added? The second is likely more honest but needs careful wording.
+1. Am I trying to help a publisher **before release**, when choosing a project, or **at release**, when a game has already been announced? My answer will determine which features I can fairly use.
+2. Is **one million recorded copies** the best definition of “success” for this question? I will compare it with the sales distribution and at least one alternative threshold before settling on it.
+3. Should the report focus on **genre alone**, or on whether the prediction changes when publisher is added? I will decide after comparing the models and looking at the data.
 
-### Referencing note
+### Referencing
 
-The supplied coursework text says **UWE Harvard**. [UWE's current general guidance](https://www.uwe.ac.uk/study/study-support/study-skills/referencing/cite-them-right-harvard) says **Cite Them Right Harvard** became its default in September 2026. Follow the module brief unless the lecturer confirms an updated requirement; check the final references against the required guide.
+I will use **Cite Them Right Harvard** for in-text citations and the bibliography, following [UWE Bristol’s current guidance](https://www.uwe.ac.uk/study/study-support/study-skills/referencing/cite-them-right-harvard). I will include DOIs where available and check that every in-text citation has a matching reference.
