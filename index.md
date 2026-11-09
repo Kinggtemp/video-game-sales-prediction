@@ -1,7 +1,3 @@
----
-title: Can Genre Predict Video Game Sales Success?
----
-
 # Can Genre Predict Video Game Sales Success?
 
 A machine learning coursework project exploring whether a game’s genre helps predict if it reaches one million recorded worldwide sales across the platforms in a historic dataset.
@@ -17,5 +13,3 @@ The dataset is being explored and the prediction methods are still being evaluat
 ## Data and limitations
 
 The project uses the publicly available [Video Games Sales as at 22 Dec 2016 dataset](https://www.kaggle.com/datasets/sidtwr/videogames-sales-dataset). Its figures are historical estimates. The analysis will describe associations; it cannot establish that a genre causes higher sales.
-
-[View the GitHub repository](https://github.com/Kinggtemp/video-game-sales-prediction).
