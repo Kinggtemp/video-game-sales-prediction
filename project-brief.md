@@ -77,17 +77,7 @@ The coursework does not explicitly ask for a separate literature review. I plan 
 - Genre and publisher are associated with franchises, investment, platform and audience. I cannot use these comparisons to identify a causal effect.
 - I will check whether large franchises such as *Call of Duty* dominate totals or success rates. I will show both counts and rates so a few famous games do not stand in for an entire genre.
 
-## 8. Planned report structure (2,000 words excluding references/appendices)
-
-1. Introduction, question and related research: **300 words**.
-2. Data origin, quality and exploration: **500 words**.
-3. Target, features and model rationale: **350 words**.
-4. Validation, results and interpretation: **600 words**.
-5. Reflection and conclusion: **250 words**.
-
-I may adjust this balance as the findings develop. Every number and figure in my report will come from the notebook.
-
-## 9. Questions I still need to resolve
+## 8. Questions I still need to resolve
 
 1. Am I trying to help a publisher **before release**, when choosing a project, or **at release**, when a game has already been announced? My answer will determine which features I can fairly use.
 2. Is **one million recorded copies** the best definition of “success” for this question? I will compare it with the sales distribution and at least one alternative threshold before settling on it.
